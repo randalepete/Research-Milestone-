@@ -1,0 +1,33 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Home — Competency{% endblock %}
+{% block content %}
+  <section>
+    <p id="greeting">Loading greeting…</p>
+    <button id="lazy-btn">Load fun fact (dynamic import)</button>
+  </section>
+
+  <section>
+    <h2>Add a Project</h2>
+    <form id="project-form">
+      <label>
+        Name
+        <input type="text" id="proj-name" required />
+      </label>
+      <label>
+        URL
+        <input type="url" id="proj-url" placeholder="https://example.com" />
+      </label>
+      <label>
+        Description
+        <textarea id="proj-desc" rows="3" placeholder="What is it?"></textarea>
+      </label>
+      <button type="submit">Add</button>
+      <span id="form-status" aria-live="polite"></span>
+    </form>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <ul id="project-list"></ul>
+  </section>
+{% endblock %}
